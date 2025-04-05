@@ -1,0 +1,32 @@
+stages:
+  preprocess:
+    cmd: python src/preprocessing.py
+    deps:
+    - data/raw/train.csv
+    - src/preprocessing.py
+    params:
+    - preprocess.input
+    - preprocess.output
+    outs:
+    - data/processed/data.csv
+    - Image/boxplots.png
+    - Image/Categorical_Graph.png
+  train:
+    cmd: python "src/model training.py"
+    deps:
+    - data/processed/data.csv
+    - src/model training.py
+    params:
+    - train.data_path
+    - train.max_depth
+    - train.model_path
+    - train.n_estimators
+    - train.random_state
+    outs:
+    - models/model.pkl
+  evaluate:
+    cmd: python src/Evaluvation.py
+    deps:
+    - data/processed/data.csv
+    - Models/model.pkl
+    - src/Evaluvation.py

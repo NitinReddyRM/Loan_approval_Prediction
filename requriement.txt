@@ -1,0 +1,9 @@
+
+numpy 
+pandas
+matplotlib.pyplot
+mlflow
+scikit-learn
+dagshub
+dvc-s3
+dvc

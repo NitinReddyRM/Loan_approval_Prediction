@@ -1,0 +1,13 @@
+preprocess:
+ input: data/raw/train.csv
+ output: data/processed/data.csv
+ images: Image
+train:
+ data_path: data/processed/data.csv
+ model_path: Models/model.pkl
+ random_state: 42
+ n_estimators: [100,200]
+ max_depth: [5,10,None]
+
+
+
