@@ -52,17 +52,17 @@ stages:
         - 200
         train.random_state: 42
     outs:
-    - path: models/model.pkl
+    - path: Models/model.pkl
       hash: md5
-      md5: 9c860fe6af7ecce23701000c63cff514
-      size: 8499915
+      md5: a60d8e37272c59f444e06f1e023606dd
+      size: 16958495
   evaluate:
     cmd: python src/Evaluvation.py
     deps:
     - path: Models/model.pkl
       hash: md5
-      md5: 9c860fe6af7ecce23701000c63cff514
-      size: 8499915
+      md5: a60d8e37272c59f444e06f1e023606dd
+      size: 16958495
     - path: data/processed/data.csv
       hash: md5
       md5: 6b9514601d559302f62b232699d5c4b4

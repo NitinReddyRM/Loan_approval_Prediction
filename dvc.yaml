@@ -23,7 +23,7 @@ stages:
     - train.n_estimators
     - train.random_state
     outs:
-    - models/model.pkl
+    - Models/model.pkl
   evaluate:
     cmd: python src/Evaluvation.py
     deps:
