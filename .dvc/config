@@ -1,0 +1,5 @@
+['remote "original"']
+    url = s3://dvc
+['remote "origin"']
+    url = s3://dvc
+    endpointurl = https://dagshub.com/nitinreddy520/Loan_approval_Prediction.s3
